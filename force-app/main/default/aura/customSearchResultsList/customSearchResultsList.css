@@ -1,0 +1,12 @@
+.THIS .slds-map_container {
+    height:89vh;
+    /*z-index: -1;*/
+}
+
+.THIS .search-results-container {
+    /*height: 89vh;*/
+}
+
+.THIS .search-results-y-overflow {
+    overflow-y: scroll;
+}

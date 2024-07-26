@@ -1,0 +1,28 @@
+<aura:component implements="forceCommunity:searchInterface" controller="CustomSearchController">
+    <!-- Above, we specify the CustomSearchController to be the controller for the aura component. The logic is handled there.-->
+    <!--<aura:attribute name="searchText" type="String" default=""/>-->
+    <aura:attribute name="checkInDate" type="Date" default="" />
+    <aura:attribute name="checkOutDate" type="Date" default="" />
+    <div class="slds-form-element slds-lookup" data-select="single">
+        <div class="slds-form-element__control">
+            <div class="slds-input-has-icon slds-input-has-icon--right">
+                <lightning:input value="{!v.checkInDate}" class="datefield" type="date" label="Check-in Date" name="checkindate" required="true"/>
+                <lightning:input value="{!v.checkOutDate}" class="datefield" type="date" label="Check-out Date" name="checkoutedate" required="true"/>
+                <lightning:select class="datefield" name="city" label="City" required="true">
+                    <option value="1">Austin</option>
+                    <option value="2">Dallas</option>
+                    
+                </lightning:select>
+                <lightning:button class="searchbutton" label="Search" onclick="{! c.handleClick }" />
+                
+                <!--<img src="https://norman-dev-ed.develop.my.salesforce.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Jpg&amp;versionId=068aj000003z2nx&amp;operationContext=DELIVERY&amp;contentId=05Taj000004GdmH&amp;page=0&amp;d=/a/aj0000001bNJ/fDBEMxIyBN95RMaPRKDGKzOnU4e_..eQsutdxXKJdCQ&amp;oid=00Daj000008ErxV"/>-->
+                <!-- 069aj000004ZY9NAAW contentdocument id -->
+                <!-- 068aj000003z2nxAAA contentversion id -->
+                <!--<lightning:buttonIcon iconName="utility:search" variant="bare" onclick="{! c.handleClick }" alternativeText="Search" class="slds-input__icon" />-->
+                <!--<ui:inputText value="{!v.searchText}" class="slds-lookup__search-input slds-input" placeholder="Search" />-->
+                
+                
+            </div>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>CustomSearchController</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>preventDuplicatePropertyAmenities</members>
+		<members>setVisibilityAllUsers</members>
+		<name>ApexTrigger</name>
+	</types>
+	<types>
+		<members>bookingComponent</members>
+		<members>bookingComponentCalculator</members>
+		<members>bookingComponentSummary</members>
+		<members>customSearch</members>
+		<members>customSearchResultItem</members>
+		<members>customSearchResultItemPrice</members>
+		<members>customSearchResultsList</members>
+		<members>customSearchResultsSearch</members>
+		<members>displayReviewStars</members>
+		<members>propertyBookingPage</members>
+		<members>propertyBookingPageCarousel</members>
+		<members>propertyReviewItem</members>
+		<members>propertyReviewScore</members>
+		<name>AuraDefinitionBundle</name>
+	</types>
+	<version>60.0</version>
+</Package>
