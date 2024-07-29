@@ -1,0 +1,5 @@
+<apex:page standardController="Account">
+    <apex:pageBlock rendered="{!$ObjectType.Account.accessible}">
+        <h1>I rendered because the account object is accessible</h1>    
+    </apex:pageBlock>
+</apex:page>
