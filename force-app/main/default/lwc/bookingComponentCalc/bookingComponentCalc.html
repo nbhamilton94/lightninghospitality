@@ -1,0 +1,13 @@
+<template>
+    <!-- Version 1 will have just a basic calendar. Version 2 will consider dates that are already booked on the property.
+		 Will need to implement the date range calendar via SLDS and apply a custom class on dates that already have bookings-->
+    
+    <!-- need to implement:
+		max guests for each unit (pull this from the listing data and pass to guests) lightning input
+		user friendly guest selection similar to evonify
+	 -->
+
+     <lightning-input type="date" name="checkInDate" label="Check In Date" value={checkInDate} onchange={handleDateChange}> </lightning-input>
+     <lightning-input type="date" name="checkOutDate" label="Check Out Date" value={checkOutDate} onchange={handleDateChange}></lightning-input>    
+     <lightning-input type="number" name="guests" label="Guests" max="16" value={guests} onchange={handleGuestChange}></lightning-input>        
+</template>

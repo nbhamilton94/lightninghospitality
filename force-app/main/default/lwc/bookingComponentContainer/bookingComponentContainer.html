@@ -1,0 +1,33 @@
+<template>
+
+    <div class="slds-grid slds-wrap slds-gutters">
+        <div class="slds-col slds-size_12-of-12">
+            <div class="slds-col slds-size_12-of-12 slds-text-heading_medium"> Booking </div>
+            <div class="slds-col slds-size_12-of-12"><hr style="margin: 0;"/></div>
+            <div class="slds-col slds-size_12-of-12">
+                <c-booking-component-calc check-in-date={checkInDate}
+                                          check-out-date={checkOutDate}
+                                          guests={guests}></c-booking-component-calc> 
+                <button class="slds-button slds-button_brand max-width" onclick={handleCalculate}>Calculate</button>            
+            </div>              
+        </div>
+        <div class="slds-col slds-size_12-of-12">
+            <div class="slds-col slds-size_12-of-12 slds-text-heading_medium  slds-var-p-top_medium"> Booking Summary</div>
+            <div class="slds-col slds-size_12-of-12"><hr style="margin: 0;"/>  </div>
+            <c-booking-component-request check-in-date={checkInDate}
+                                       check-out-date={checkOutDate}
+                                       guests={guests}
+                                       nightly-rate={nightlyRate}
+                                       number-of-nights={numberOfNights}
+                                       cleaning-fee={cleaningFee}
+                                       taxes={taxes}
+                                       total={total}
+                                       ondatechange={handleDateChange}> </c-booking-component-request>
+            <div class="slds-col slds-size_12-of-12">
+                <button class="slds-button slds-button_brand max-width" onclick={handleBookingRequest}>Request To Book</button>
+            </div>             
+        </div>
+        
+    </div>
+    
+</template>
