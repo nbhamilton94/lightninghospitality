@@ -58,7 +58,7 @@
                 <template if:false={isLoading}>
                     <template if:true={carousel}>
                         <div class="carousel-wrapper">
-                            <div class="slds-carousel__panels" style={panelStyle}>
+                            <div class="slds-carousel__panels">
                                 <template for:each={carousel} for:item="panel">
                                     <div key={panel.id} class="slds-carousel__panel">
                                         <template for:each={panel.items} for:item="img">
@@ -98,7 +98,6 @@
             <div class="slds-col slds-size_12-of-12">
                 <!--<c:propertyReviewScore averageReviewScore="{!v.selectedProperty.averageReviewScore}"/>-->
             </div>        
-            
             
         </div>
         <div class="slds-grid slds-gutters">

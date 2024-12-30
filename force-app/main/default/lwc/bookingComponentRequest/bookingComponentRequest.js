@@ -7,14 +7,17 @@ export default class BookingComponentRequest extends NavigationMixin(LightningEl
     @api checkInDate;
     @api checkOutDate;
     @api guests;
-    @api nightlyRate;
     @api numberOfNights;
     @api cleaningFee;
-    @api taxes;
-    @api total;
+
+    @api totalFormatted;
+    @api taxesFormatted;
+    @api nightlyRateFormatted;
+    @api isLoading;
+
 
     connectedCallback(){
-        
+
     }
     
     handlePriceRecalculation() {

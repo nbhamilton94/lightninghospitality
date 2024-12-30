@@ -7,7 +7,8 @@
             <div class="slds-col slds-size_12-of-12">
                 <c-booking-component-calc check-in-date={checkInDate}
                                           check-out-date={checkOutDate}
-                                          guests={guests}></c-booking-component-calc> 
+                                          guests={guests}
+                                          ondatechange={handleDateChange}></c-booking-component-calc> 
                 <button class="slds-button slds-button_brand max-width" onclick={handleCalculate}>Calculate</button>            
             </div>              
         </div>
@@ -17,12 +18,13 @@
             <c-booking-component-request check-in-date={checkInDate}
                                        check-out-date={checkOutDate}
                                        guests={guests}
-                                       nightly-rate={nightlyRate}
+                                       nightly-rate-formatted={nightlyRateFormatted}
                                        number-of-nights={numberOfNights}
                                        cleaning-fee={cleaningFee}
-                                       taxes={taxes}
-                                       total={total}
-                                       ondatechange={handleDateChange}> </c-booking-component-request>
+                                       taxes-formatted={taxesFormatted}
+                                       total-formatted={totalFormatted}
+                                       is-loading={isLoading}
+                                       > </c-booking-component-request>
             <div class="slds-col slds-size_12-of-12">
                 <button class="slds-button slds-button_brand max-width" onclick={handleBookingRequest}>Request To Book</button>
             </div>             

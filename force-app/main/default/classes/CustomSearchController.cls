@@ -110,7 +110,7 @@ public without sharing class CustomSearchController {
         List<Property__c> properties = [SELECT Id, Name, Maximum_Guests__c, Address__Street__s, Address__City__s, Address__StateCode__s, Number_of_Bedrooms__c, Number_of_Bathrooms__c, Nickname__c, Cover_Photo__c,Property_Description__c,  
                                         (SELECT Check_In_Date__c, Check_Out_Date__c FROM Reservations__r WHERE Check_Out_Date__c >= :checkInDate AND Check_In_Date__c <= :checkOutDate ),
                                         (SELECT Nightly_Rate__c FROM Property__r WHERE Calendar_Date__c >= :checkInDate AND Calendar_Date__c <= :checkOutDate), 
-                                        (SELECT Id, Comments__c, Score__c FROM Reviews__r)
+                                        (SELECT Id, Comments__c, Score__c, Service_Score__c, Location_Score__c, Value_of_Money__c, Profile_Picture__c, Guest_Name__c, Created_Date__c FROM Reviews__r)
                                         FROM Property__c];
         
         // go through the list of properties and calculate the average nightly rate based on the check in and check out date the guest picked        
@@ -174,7 +174,7 @@ Id recordId = (Id) selectedProperty.get('recordId');
         Property__c prop = [SELECT Id, Name, Maximum_Guests__c, Address__Street__s, Address__City__s, Address__StateCode__s, Number_of_Bedrooms__c, Number_of_Bathrooms__c, Nickname__c, Cover_Photo__c,Property_Description__c, Cancellation_Policy__c,
                             (SELECT Amenity_Link__c FROM Property_Amenities__r WHERE Property__r.Id =:recordId),
                             (SELECT Nightly_Rate__c FROM Property__r WHERE Calendar_Date__c >= :checkInDate AND Calendar_Date__c <= :checkOutDate), 
-                            (SELECT Id, Comments__c, Score__c FROM Reviews__r)
+                            (SELECT Id, Comments__c, Score__c, Service_Score__c, Location_Score__c, Value_of_Money__c, Profile_Picture__c, Guest_Name__c, Created_Date__c FROM Reviews__r)
                             FROM Property__c WHERE Property__c.Id =: recordId LIMIT 1];
         Decimal avgReviewScore = 0;
         Integer reviewCount = 0;
